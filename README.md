@@ -1,0 +1,2 @@
+# Description
+This repo contains my solutions to the [`WebGL-Workshop`](https://github.com/stackgl/webgl-workshop) module available on [nodeschool.io](). Doing this to get better understanding of WebGL.
