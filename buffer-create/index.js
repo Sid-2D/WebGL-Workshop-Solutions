@@ -14,6 +14,10 @@ exports.init = function(gl) {
   uScreenSize = gl.getUniformLocation(program, 'uScreenSize')
 
   //TODO: Initialize buffer with DATA
+  buffer = gl.createBuffer(gl.ARRAY_BUFFER)
+  gl.bindBuffer(gl.ARRAY_BUFFER, buffer)
+  var data = new Float32Array(DATA);
+  gl.bufferData(gl.ARRAY_BUFFER, data, gl.DYNAMIC_DRAW)
 }
 
 exports.draw = function(gl) {
@@ -28,5 +32,5 @@ exports.draw = function(gl) {
   gl.uniform2f(uScreenSize, width, height)
 
   //TODO: when the buffer is initialized uncomment this line
-  //drawIt(gl, buffer)
+  drawIt(gl, buffer)
 }
